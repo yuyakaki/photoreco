@@ -1,0 +1,7 @@
+/* 最大表示時の横幅*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+    padding: 0;
+   }
+}

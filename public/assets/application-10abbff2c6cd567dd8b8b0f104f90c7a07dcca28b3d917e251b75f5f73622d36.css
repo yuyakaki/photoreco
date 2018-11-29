@@ -1,0 +1,37 @@
+
+/* navbar 背景色・下線色*/
+
+.navbar-inverse-self {
+  background-color: #fff;
+  border-color: #E0E0E0;
+}
+
+/* タイトルフォント 色・サイズ・書式指定*/
+.navbar-inverse .navbar-brand {
+  color: #000;
+  font-size: 25px;
+  font-family: 'Mali', cursive;
+}
+
+/* モバイルボタン 色・枠線色*/
+.navbar-inverse-self .navbar-toggle-self {
+  background-color: #E57373;
+  border-color: #E57373;
+}
+
+/* モバイルボタン 押下時の色・枠線*/
+.navbar-inverse-self .navbar-toggle:focus, .navbar-inverse-self .navbar-toggle:hover {
+    background-color: #E57373;
+    border-color: #E57373;
+}
+
+/* モバイルボタン 押下時のnabver枠線*/
+.navbar-inverse-self .navbar-collapse, .navbar-inverse-self .navbar-form {
+  border-color: #E0E0E0;
+}
+
+/* nabver 右コンテンツ 色*/
+.navbar-inverse-self .navbar-nav>li>a {
+    color: #E57373;
+}
+
