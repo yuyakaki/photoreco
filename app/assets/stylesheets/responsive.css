@@ -1,7 +1,29 @@
+@media (min-width: 768px){
+  footer {
+      width: 735px;
+  }
+}
+
+@media (min-width: 992px){
+  .container {
+      width: 970px;
+  }
+  
+  footer {
+      width:955px;
+  }
+}
+
 /* 最大表示時の横幅*/
 @media (min-width: 1200px) {
   .container {
     width: 1000px;
     padding: 0;
    }
+   
+   footer {
+    width: 1000px;
+    margin: 0 auto;
+   }
 }
+
