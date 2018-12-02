@@ -6,6 +6,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    @posts = Post.order('created_at DESC').page(params[:page])
+    @user = User.find(params[:id])
+    counts(@user)
   end
 
   def new
@@ -17,20 +20,38 @@ class UsersController < ApplicationController
     
     if @user.save
       flash[:success] = "ユーザを登録しました。"
+      
+      session[:user_id] = @user.id
+      
       redirect_to @user
     else
       flash[:danger] = "ユーザの登録に失敗しました。"
+      
       render :new
     end
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
+    
+    if @user.update(user_params)
+      flash[:success] = "編集に成功しました。"
+      redirect_to @user
+    else
+      flash[:danger] = "編集に失敗しました。"
+      render :edit
+    end
   end
 
   def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:success] = "アカウントを削除しました。"
+    redirect_back(fallback_location: root_path)
   end
 end
 
@@ -38,5 +59,5 @@ end
 private
 
 def user_params
-  params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  params.require(:user).permit(:name, :image_name, :content, :email, :password, :password_confirmation)
 end

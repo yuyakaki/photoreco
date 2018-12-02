@@ -1,0 +1,9 @@
+
+<% posts.each do |post| %>
+    <div class="col-xs-4">
+      <div class="post-content-area">
+      <%= image_tag post.image_name, class: 'img-responsive' %>
+      </div>
+    </div>
+  <% end %>
+  <%= paginate posts %>

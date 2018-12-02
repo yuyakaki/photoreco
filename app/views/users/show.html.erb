@@ -1,24 +1,22 @@
+
 <div class="user_show">
   <div class="inner">
     <div class="row">
       <aside class="col-xs-4">
-          <div class="panel-body">
-            <img class="media-object img-rounded img-responsive" src="https://secure.gravatar.com/avatar/37aea63bb3e570e6f2229a96e172c18a?s=500" alt="">
-          </div>
+             <%= image_tag @user.image_name, class: 'user-profile-image' %>
       </aside>
-      <div class="col-xs-offset-5 col-xs-3">
-        <div class="edit-profile-btn">
-          プロフィールを編集
-        </div>
+      <div class="edit-profile-box">
+        <%= link_to 'プロフィールを編集', edit_user_path, class: 'edit-profile-btn' %>
+
       </div>
       <div class="col-xs-8">
-        <h4>yuuya</h4>
+        <%= @user.name %>
       </div>  
       
       <div class="right-aside">
         <div class="col-xs-8">
           <ul class="nav nav-tabs nav-justified">
-            <li class="active">投稿：xx件</li>
+            <li class="active">投稿：<%= @count_posts %>件</li>
             <li class="">xx人をフォロー</li>
             <li class="">xx人のフォロワー</li>
           </ul>
@@ -36,9 +34,16 @@
       </div> 
     </div>  
     <div class="row">
+      <div class="new-post-area">
       <div class="new-post-btn">
-          新規投稿
+          <%= link_to '新規投稿', new_post_path %>
       </div>
+    </div>  
+    <div class="show-posts-area">
+      <%= render 'posts/posts', posts: @posts %>
+    </div>    
+      
+      
     </div>  
       
   </div>

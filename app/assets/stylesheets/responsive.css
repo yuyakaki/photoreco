@@ -27,3 +27,10 @@
    }
 }
 
+.container {
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: -20px;
+    margin-right: auto;
+    margin-left: auto;
+}
