@@ -34,14 +34,14 @@
           <%= f.password_field :password_confirmation, class: 'form-control', :placeholder => "Password confirmation" %>
         </div>
       
-        <%= f.submit '編集する', class: 'btn btn-primary btn-block' %>
+        <%= f.submit '変更する', class: 'btn btn-primary btn-block' %>
       <% end %>
   </div>
-  <% if current_user.id == @user.id %>
+ <%# if current_user.id == @user.id %> 
   <div class="user-destroy-box">
     <%= link_to 'アカウントを削除', user_path, method: :delete, data: { confirm: '本当に削除しますか？'} %>
   </div>
-  <% end %>  
+  <%# end %>  
 
   </div>
 </div>

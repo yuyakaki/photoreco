@@ -15,6 +15,11 @@ class PostsController < ApplicationController
       render :new
     end
   end
+  
+  def show
+    @post = Post.find(params[:id])
+    @user = @post.user
+  end
 
   def destroy
   end

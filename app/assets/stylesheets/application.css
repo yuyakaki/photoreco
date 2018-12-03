@@ -228,6 +228,7 @@ a:visited {
     height: 300px;
     object-fit: cover; /* この一行を追加するだけ！ */
     border-radius: 50px;
+    border: solid 1px #e7e7e7;
 }
 
 
@@ -237,6 +238,7 @@ a:visited {
     height: 160px;
     object-fit: cover; /* この一行を追加するだけ！ */
     border-radius: 25px;
+    border: solid 1px #e7e7e7;
 }
 
 
@@ -301,15 +303,72 @@ a:visited {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    border: solid 1px #e7e7e7;
     object-fit: cover;
 }
 
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
+    border: solid 1px #e7e7e7;
 }
+
+
+.show-title-area {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.show-created_at-area {
+    float: right;
+}
+
+.post-show-area {
+    width: 80%;
+}
+
+
+.post-show-area img{
+    width: 447px;
+    height: 447px;
+    object-fit: cover;
+    border: solid 1px #e7e7e7;
+}
+
+
+.show-user-image img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 1px #e7e7e7;
+}
+
+.padding-top-control {
+    padding-top: 10px;
+}
+
+.show-user-image {
+    width: 20%;
+    float:left;
+}
+
+.show-content-area {
+    width:100%;
+    height: 150px;
+    margin: 10px 0;
+    padding: 5px;
+    border: solid 1px #e7e7e7;
+}
+
+
+
+
+
+
+
 
 
 

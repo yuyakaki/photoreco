@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @posts = Post.order('created_at DESC').page(params[:page])
     @user = User.find(params[:id])
+    @posts = @user.posts.order('created_at DESC').page(params[:page])
     counts(@user)
   end
 
