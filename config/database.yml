@@ -48,7 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: photoreco_production
   username: photoreco
   password: <%= ENV['PHOTORECO_DATABASE_PASSWORD'] %>
