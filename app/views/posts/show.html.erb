@@ -24,9 +24,11 @@
             <%= @user.name %>
           <% end %>  
           </div>
-          <div class="show-user-follow-btn">
-            <%= render 'relationships/follow_button', user: @user %>
-          </div>
+          <% if logged_in? %>
+            <div class="show-user-follow-btn">
+              <%= render 'relationships/follow_button', user: @user %>
+            </div>
+          <% end %>  
         </div>
         <div class="show-scroll-area">
           <div class="show-content-area">
@@ -76,6 +78,10 @@
             <%= f.submit 'コメントする', class: 'btn btn-primary btn-block' %>
           <% end %>
         </div>  
+        <% else %>
+          <div class="login-guide">
+            <p><%= link_to 'ログイン', login_path %>すると「いいね」やコメントができます。</p>
+          </div>
         <% end %>
       </div>  
     <% if logged_in? %>  

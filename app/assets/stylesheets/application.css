@@ -391,6 +391,7 @@ a:visited {
 
 .border-none {
     border: 0;
+    background: #fff;
 }
 
 .rankings-contents-area {
@@ -452,9 +453,13 @@ a:visited {
     margin: 0 auto;
 }
 
+.login-guide a {
+    color: #E57373;
+}
 
-
-
+a.signup {
+    color: #E57373;
+}
 
 
 
