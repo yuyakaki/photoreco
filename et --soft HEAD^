@@ -1,0 +1,125 @@
+[33mcommit 4a9e25d9a806d664325f231432ff4734ac29e49b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Thu Dec 6 07:05:09 2018 +0000
+
+    follow unfollow
+
+[33mcommit 828439e56234b64fd39db5e2553317f133562cd8[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Thu Dec 6 02:58:22 2018 +0000
+
+    likes ranking
+
+[33mcommit 509ea6c92473ae66cdce338461d3d7003c5f8d57[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Wed Dec 5 11:21:16 2018 +0000
+
+    like btn
+
+[33mcommit 7cd45b5332a25e6a27a36a5b240e69c2fbcf211e[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Wed Dec 5 03:41:47 2018 +0000
+
+    post delete
+
+[33mcommit 0d0caf18933a38d6e21fc273d2eba32e84b6730d[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Tue Dec 4 16:00:00 2018 +0000
+
+    rails assets:precompile
+
+[33mcommit 3a51cff95a22e5ffae6dc7dc20159614f0f528eb[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Tue Dec 4 15:49:50 2018 +0000
+
+    bundle install
+
+[33mcommit 156e77ffa3b0fb6f56cf7f0dcc69614555486e6e[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Tue Dec 4 15:46:19 2018 +0000
+
+    image_name.to_s
+
+[33mcommit b06eb45c5c484ac80d5487bba8e146c5d071f913[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Tue Dec 4 15:26:26 2018 +0000
+
+    cloudiary comolete
+
+[33mcommit 50299a0bb0125fdf902d22a5fa9cd1e15bb4a8aa[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Tue Dec 4 14:52:40 2018 +0000
+
+    cloudinary test
+
+[33mcommit 64c914661970c80fcc11128378d174a767cde676[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Tue Dec 4 09:29:52 2018 +0000
+
+    s3 error
+
+[33mcommit 0ab3b698313ddbe91e6028ad5fe0f1347cb01d7a[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Mon Dec 3 12:39:10 2018 +0000
+
+    aws s3 complete#1
+
+[33mcommit 383c7d47d3fd7e5047ef85a6d70b5aecc43645cc[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Mon Dec 3 12:10:13 2018 +0000
+
+    aws s3 complete#1
+
+[33mcommit 4d83fba4a40ab7f2fbcdf1a99fdf0870906d60a7[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Mon Dec 3 05:10:57 2018 +0000
+
+    second heroku
+
+[33mcommit 9e870490a3665d8c60118eb9542cf527bb7e7658[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Mon Dec 3 05:04:18 2018 +0000
+
+    for heroku
+
+[33mcommit 7463592eba458ae5ba068666a303d5c7b4173fb1[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Mon Dec 3 04:47:10 2018 +0000
+
+    show page
+
+[33mcommit 2727b84ee5c1660055581f70a6a3d574d4c787c6[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Sun Dec 2 06:49:18 2018 +0000
+
+    post
+
+[33mcommit 23946f2df7f6ec76b667a6382b5adcf82e181d9c[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Fri Nov 30 09:41:53 2018 +0000
+
+    requre_user_logged_in
+
+[33mcommit 564aa21c755c3463a97de404bccbbb09b1b9328e[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Fri Nov 30 09:35:18 2018 +0000
+
+    login
+
+[33mcommit 426bc51a2774ea709ef9cb8b9e4dd359c0adefcc[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Thu Nov 29 14:30:38 2018 +0000
+
+    top page
+
+[33mcommit 3cf16759006c6abb1d338072aa1f96b44b554ab0[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Thu Nov 29 02:05:39 2018 +0000
+
+    set preparation
+
+[33mcommit cdc77785d63dd1a63aef09547425e339023d1a98[m
+Author: yuuya.kakizono <yuya07sid@hotmail.com>
+Date:   Thu Nov 29 01:48:40 2018 +0000
+
+    init

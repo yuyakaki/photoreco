@@ -1,7 +1,7 @@
 
 <div class="user_show">
   <div class="inner">
-    <div class="row user-show-border-botom">
+    <div class="row">
       <aside class="col-xs-4">
              <%= image_tag @user.image_name.to_s, class: 'user-profile-image' %>
       </aside>
@@ -28,23 +28,18 @@
     <div class="tab-area">
       <div class="col-xs-offset-2 col-xs-8">
        <ul class="nav nav-justified">
-          <li class="active-color <%= 'active' if current_page?(user_path(@user)) %>"><%= link_to user_path(@user) do %>投稿一覧<% end %></li>
-          <li class="<%= 'active' if current_page?(followings_user_path(@user)) %>"><%= link_to followings_user_path(@user) do %>フォロー<% end %></li>
-          <li class="<%= 'active' if current_page?(followers_user_path(@user)) %>"><%= link_to followers_user_path(@user) do %>フォロワー<% end %></li>
+          <li class=" <%= 'active' if current_page?(user_path(@user)) %>"><%= link_to user_path(@user) do %>投稿一覧<% end %></li>
+          <li class=" <%= 'active' if current_page?(followings_user_path(@user)) %>"><%= link_to followings_user_path(@user) do %>フォロー<% end %></li>
+          <li class="active-color <%= 'active' if current_page?(followers_user_path(@user)) %>"><%= link_to followers_user_path(@user) do %>フォロワー<% end %></li>
         </ul>
       </div> 
     </div>  
     <div class="row">
       <div class="new-post-area">
-     <% if current_user.id == @user.id %> 
-      <div class="new-post-btn">
-          <%= link_to '新規投稿', new_post_path %>
-      </div>
-     <% end%>
+
     </div>  
-    <div class="show-posts-area">
-      <%= render 'posts/posts', posts: @posts %>
-    </div>    
+      <%= render 'users', users: @followers %>
+  
       
       
     </div>  

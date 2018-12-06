@@ -1,10 +1,10 @@
 class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
+
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  # storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -12,9 +12,42 @@ class ImageUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
-
+  
+  
   def default_url
     "default.png"
+  end
+  
+=begin
+  if Rails.env.production? || Rails.env.staging?
+    storage :fog
+  else
+    storage :fog
+  end
+ 
+
+
+  include CarrierWave::RMagick
+  
+  process resize_to_fill: [200, 200]
+  process convert: 'png'
+  
+  def filename
+    super.chomp(File.extname(super)) + '.png' if original_filename.present?
+  end
+=end  
+  
+  
+# Choose what kind of storage to use for this uploader:
+  if Rails.env.production?
+    include Cloudinary::CarrierWave
+  else
+    storage :file
+  end
+
+  #herokuが固有のidを必要とします。
+  def public_id
+    model.id
   end
   
   # Provide a default URL as a default if there hasn't been a file uploaded:

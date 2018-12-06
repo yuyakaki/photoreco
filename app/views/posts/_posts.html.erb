@@ -1,13 +1,14 @@
+<div class="show-posts-area-controll">
 <% posts.each do |post| %>
     <div class="col-xs-4">
       <div class="post-content-area">
       <%= link_to post_path(post) do %>
-        <%= image_tag post.image_name, :class=> 'img-responsive' %>
+        <%= image_tag post.image_name.to_s, :class=> 'img-responsive' %>
       <% end %>
       </div>
     </div>
 
   <% end %>
   <%= paginate posts %>
-  
+</div>  
 

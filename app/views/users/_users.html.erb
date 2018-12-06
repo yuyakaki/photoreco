@@ -1,24 +1,25 @@
-
-  <div class="inner">
-    <div class="row">
-      <% if users.any? %>
-      
-        <ul class="media-list">
-      
-          <% users.each do |user| %>
-            <li class="media">
-               <aside class="col-xs-offset-2 col-xs-2">
-                   <%= image_tag user.image_name, class: 'img-responsive' %>
-              </aside>
-              <div class="media-body">
-              <div>
-                <div>
-                  <p><%= link_to user.name, user_path(user) %></p>
-                </div>
-              </div>
-            </li>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
+<div class="inner">
+  <div class="row">
+    <% if users.any? %>
+     <ul class="media-list">
+        <% users.each do |user| %>
+          <li class="media">
+             <aside class="col-xs-offset-2 col-xs-2">
+                <%= link_to user_path(user) do %>
+                 <%= image_tag user.image_name.to_s, class: 'img-responsive' %>
+                <% end %>
+            </aside>
+            <div class="col-xs-6">
+              <div class="user-name">
+                <p><%= link_to user.name, user_path(user) %></p>
+              </div>  
+            <div class="user-follow-btn">
+              <%= render 'relationships/follow_button', user: user %>
+            </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
+</div>

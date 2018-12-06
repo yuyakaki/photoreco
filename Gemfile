@@ -51,8 +51,26 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'kaminari'
 
+# for image uploader with AWS S3
 gem 'carrierwave'
+gem 'fog-aws'
+
+
+#group :production do
+ # gem 'pg', '0.21.0'
+#end
+
+gem 'dotenv-rails'
+
+gem 'rmagick'
+
+gem 'cloudinary'
+
+group :test, :development do
+    gem 'sqlite3'
+end
 
 group :production do
-  gem 'pg', '0.21.0'
+    gem 'pg'
+    gem 'thin'
 end

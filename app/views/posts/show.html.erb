@@ -1,3 +1,4 @@
+
 <div class="inner post-show-area">
     <div class="row padding-top-control">
       <div class="col-xs-7">
@@ -8,21 +9,81 @@
           <%= @post.created_at.strftime("%Y年%m月%d日") %>
         </div>
         <div class="show-image-area">
-          <%= image_tag @post.image_name %>
+          <%= image_tag @post.image_name.to_s %>
         </div>
       </div>
       <div class="col-xs-5">
         <div class="show-user-area clearfix">
           <div class="show-user-image">
-            <%= image_tag @user.image_name %>
+            <%= link_to @user do %>
+              <%= image_tag @user.image_name.to_s %>
+            <% end %>
           </div>
           <div class="show-user-name">
+           <%= link_to @user do %>  
             <%= @user.name %>
+          <% end %>  
+          </div>
+          <div class="show-user-follow-btn">
+            <%= render 'relationships/follow_button', user: @user %>
           </div>
         </div>
-        <div class="show-content-area">
+        <div class="show-scroll-area">
+          <div class="show-content-area">
           <%= @post.content %>
+          </div>
+        <div class="show-comments-area">
+          <% @comments.each do |c| %>
+            <div class="show-comment">
+              <a href="/users/<%= @post.user.id %>"><%= c.user.name %></a>
+              :
+              <%= c.content %>
+            </div>
+          <% end %>
         </div>
+        </div>
+        <% if logged_in? %>
+        <div class="like-area">
+
+          <% if Like.find_by(user_id: current_user.id, post_id: @post.id) %>
+
+            <%= form_tag(like_path(@post.id), method: :delete) do %>
+              <%= hidden_field_tag :post_id, @post.id %>
+              <%= button_tag :type => "submit", class: 'border-none' do %>
+                <span class="fa fa-heart like-btn-unlike fa-lg"></span>
+              <% end %>
+            <% end %>
+          <% else %>
+            <%= form_tag(likes_path) do %>
+              <%= hidden_field_tag :post_id, @post.id %>
+              <%= button_tag :type => "submit", class: 'border-none' do %>
+                <span class="fa fa-heart like-btn fa-lg"></span>
+              <% end %>
+            <% end %>
+          <% end %>
+          <div class="likes-count-area">
+            <%= @likes_count %>
+          </div>
+        </div>
+        <div class="comment-form">
+          <%= form_for(@comment) do |f| %>
+            <%= render 'layouts/error_messages', model: f.object %>
+            <div class="form-group">
+              <%= f.text_area :content, class: 'form-control', :placeholder => "Comment" %>
+              <%= f.hidden_field :user_id, :value => current_user.id %>
+              <%= f.hidden_field :post_id, :value => @post.id %>
+            </div>
+            <%= f.submit 'コメントする', class: 'btn btn-primary btn-block' %>
+          <% end %>
+        </div>  
+        <% end %>
       </div>  
+    <% if logged_in? %>  
+      <% if current_user.id == @post.user.id %> 
+        <div class="destroy-area">
+          <%= link_to '投稿を削除する', post_path, method: :delete, data: { confirm: '本当に削除しますか？'} %>
+        </div>  
+      <% end %>
+    <% end %>
     </div>
 </div>

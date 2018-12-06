@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hkfkbkp8y
+  api_key: '936759487977469'
+  api_secret: U__I9DPpSM5uJemnh7Zr-8h3HWs
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hkfkbkp8y
+  api_key: '936759487977469'
+  api_secret: U__I9DPpSM5uJemnh7Zr-8h3HWs
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hkfkbkp8y
+  api_key: '936759487977469'
+  api_secret: U__I9DPpSM5uJemnh7Zr-8h3HWs
+  enhance_image_tag: true
+  static_image_support: false

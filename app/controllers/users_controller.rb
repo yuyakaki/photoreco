@@ -20,13 +20,10 @@ class UsersController < ApplicationController
     
     if @user.save
       flash[:success] = "ユーザを登録しました。"
-      
       session[:user_id] = @user.id
-      
       redirect_to @user
     else
       flash[:danger] = "ユーザの登録に失敗しました。"
-      
       render :new
     end
   end
@@ -47,6 +44,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def followings
+    @user = User.find(params[:id])
+    @followings = @user.followings.page(params[:page])
+    counts(@user)
+  end
+  
+  def followers
+    @user = User.find(params[:id])
+    @followers = @user.followers.page(params[:page])
+    counts(@user)
+  end
+
   def destroy
     @user = User.find(params[:id])
     @user.destroy
@@ -54,7 +63,6 @@ class UsersController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
 end
-
 
 private
 
