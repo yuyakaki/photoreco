@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   
   get 'rankings/like', to: 'rankings#like'
   
+  get 'search', to: 'posts#search' 
+  
   get 'signup', to: 'users#new'
   resources :users do
     member do

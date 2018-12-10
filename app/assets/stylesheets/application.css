@@ -461,7 +461,10 @@ a.signup {
     color: #E57373;
 }
 
-
+.cover-content h3 {
+    color: #E57373;
+    font-size: 20px;
+}
 
 
 
