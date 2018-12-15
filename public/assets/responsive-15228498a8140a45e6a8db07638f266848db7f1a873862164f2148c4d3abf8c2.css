@@ -1,4 +1,5 @@
 /* 小型スマホのスタイル */
+
 @media (max-width: 349px){
         .post-content-area .img-responsive {
           width: 276px;
